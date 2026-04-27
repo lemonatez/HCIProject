@@ -76,4 +76,4 @@ export const router = createBrowserRouter([
     path: '/admin/menu',
     Component: AdminMenuManagement
   }
-]);
+], { basename: '/HCIProject/' });

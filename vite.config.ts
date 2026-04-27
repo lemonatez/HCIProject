@@ -24,7 +24,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "/HCLProject/",
+  base: "/HCIProject/",
   resolve: {
     alias: {
       // Alias @ to the src directory

@@ -5,6 +5,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Food Ordering System UI</title>
+  <!-- SPA Redirect: Restores the URL that 404.html encoded as a query string -->
+  <script>
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function (s) {
+          return s.replace(/~and~/g, '&');
+        }).join('?');
+        window.history.replaceState(null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location));
+  </script>
   <style>
     html,
     body {
@@ -16,12 +29,11 @@
       height: 100%;
     }
   </style>
-  <script type="module" crossorigin src="assets/index-CIy-5ol3.js"></script>
-  <link rel="stylesheet" crossorigin href="assets/index-Cv3emjXF.css">
 </head>
 
 <body>
   <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 
 </html>
